@@ -44,3 +44,5 @@ You can bind the number keys to the command ```sort-tab-select-visible-tab```, s
 
 This function automatically recognizes the number at the end of the keystroke
 and switches to the tab of the corresponding index.
+
+

@@ -431,6 +431,28 @@
   (interactive)
   (switch-to-buffer (sort-tab-get-next-buffer)))
 
+
+(defun sort-tab-get-next-buffer-2 (n)
+  (let ((index n))
+   
+      (nth (+ 0 index) sort-tab-visible-buffers)))
+
+(defun sort-tab-yu-1()
+  (interactive)
+  (switch-to-buffer (sort-tab-get-next-buffer-2 1)))
+
+(defun sort-tab-yu-2()
+  (interactive)
+  (switch-to-buffer (sort-tab-get-next-buffer-2 2)))
+
+(defun sort-tab-yu-3()
+  (interactive)
+  (switch-to-buffer (sort-tab-get-next-buffer-2 3)))
+
+(defun sort-tab-yu-4()
+  (interactive)
+  (switch-to-buffer (sort-tab-get-next-buffer-2 4)))
+
 (defun sort-tab-select-first-tab ()
   (interactive)
   (switch-to-buffer (sort-tab-get-first-buffer)))
