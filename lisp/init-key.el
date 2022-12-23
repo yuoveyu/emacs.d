@@ -9,6 +9,7 @@
 
 
 (use-package general
+  :ensure t
   :init
   (with-eval-after-load 'evil
     (general-add-hook 'after-init-hook

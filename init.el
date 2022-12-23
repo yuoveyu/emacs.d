@@ -47,7 +47,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(general lsp-metals lsp-java go-complete tern-auto-complete company-lua lsp-mode jedi modus-themes lsp-pyright pyvenv counsel-etags yaml-mode dtrt-indent tabbar-ruler window-numbering which-key use-package treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil tabbar rainbow-delimiters neotree lsp-ui lsp-ivy ivy-rich highlight-symbol doom-themes doom-modeline dashboard darkokai-theme counsel-projectile amx all-the-icons))
+   '(general lsp-metals lsp-java go-complete tern-auto-complete company-lua lsp-mode jedi modus-themes lsp-pyright pyvenv counsel-etags yaml-mode dtrt-indent tabbar-ruler window-numbering which-key use-package treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil tabbar rainbow-delimiters neotree lsp-ui lsp-ivy ivy-rich highlight-symbol dashboard darkokai-theme counsel-projectile amx all-the-icons))
  '(tabbar-separator '(1.5))
  '(warning-suppress-types '((emacs) (emacs) (emacs))))
 (custom-set-faces
