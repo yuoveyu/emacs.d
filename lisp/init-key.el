@@ -94,6 +94,16 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "K" 'kill-other-buffers
     )
 
+   (+general-global-menu! "code" "c"
+
+    "i"  'eglot-find-implementation
+    "d"  'eglot-find-declaration
+    "u"  'eglot-find-typeDefinition
+    "m"  'eglot-java-run-main
+    "b"  'pop-tag-mark
+   )
+ 
+
   (+general-global-menu! "edit" "e"
 
     "a"  'mark-whole-buffer
@@ -170,6 +180,8 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
 
   (+general-global-menu! "toggle" "T"
     "t"  'treemacs
+    "s"  'treemacs-switch-workspace
+    "c"  'treemacs-create-workspace
     "p"  'treemacs-projectile
     "r"  'treemacs-remove-project-from-workspace
     "a"  'treemacs-add-project)

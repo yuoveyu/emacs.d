@@ -33,7 +33,11 @@
 ;;(use-package magit
 ;;  :ensure t)
 
-
+(use-package marginalia
+  :ensure t
+  :hook (after-init . marginalia-mode)
+  :init
+  :config)
 
 
 

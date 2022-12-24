@@ -8,6 +8,7 @@
 ;;代替
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(setq-default cursor-type 'bar)
 
 (defconst *is-mac* (eq system-type 'darwin)) 
 (defconst *is-linux* (eq system-type 'gnu/linux)) 
@@ -21,11 +22,12 @@
 (add-to-list 'load-path "~/.emacs.d/config")
 (require 'cp-settings)
 
-
+(electric-indent-mode 1)
 (menu-bar-mode -1) 
 (tool-bar-mode -1)
 (cua-mode t)
-;;(global-hl-line-mode 1)
+(global-hl-line-mode 1)
+(add-hook 'prog-mode-hook #'hs-minor-mode)
 
 ;;开启鼠标支持
 (xterm-mouse-mode 1) 

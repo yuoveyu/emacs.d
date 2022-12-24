@@ -1,4 +1,5 @@
-(load-theme 'tango-dark t)
+;;tango-dark
+(load-theme 'modus-vivendi t)
 
 (use-package doom-modeline
   :ensure t

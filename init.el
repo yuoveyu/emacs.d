@@ -19,8 +19,8 @@
 (require 'init-file)  ;文件和文件树
 (require 'init-theme) ;主题
 ;;(require 'init-lsp)  ;lsp
-;;(require 'init-completion);
-;;(require 'init-java)  ;java
+(require 'init-code);
+(require 'init-java)  ;java
 ;;(require 'init-python)  ;python
 ;;(require 'init-go)  ;go
 ;;(require 'init-web)  ;web
@@ -36,14 +36,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- ;;'(package-selected-packages
- ;;  '(general lsp-metals lsp-java go-complete tern-auto-complete company-lua lsp-mode jedi modus-themes lsp-pyright pyvenv counsel-etags yaml-mode dtrt-indent tabbar-ruler window-numbering which-key use-package treemacs-projectile treemacs-persp  treemacs-icons-dired treemacs-evil tabbar rainbow-delimiters neotree lsp-ui lsp-ivy ivy-rich highlight-symbol dashboard darkokai-theme counsel-projectile amx all-the-icons))
- ;;'(tabbar-separator '(1.5))
- ;;'(warning-suppress-types '((emacs) (emacs) (emacs)))
- )
-;;(custom-set-faces
+ '(package-selected-packages
+   '(company-tabnine company-box company window-numbering which-key use-package undo-tree treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil rainbow-delimiters popper org-superstar org-super-agenda org-pomodoro org-bullets org-appear marginalia lsp-treemacs ivy-rich highlight-symbol general evil-org doom-modeline dashboard counsel-projectile amx all-the-icons)))
+(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-;; )
+ )
