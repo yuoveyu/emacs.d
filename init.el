@@ -1,16 +1,13 @@
+(setq gc-cons-threshold most-positive-fixnum)
 (setq debug-on-error nil)
-(when (version< emacs-version "25.1")
-  (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if posible."))
-
 ;; Load path
 (defconst emacs-cache-directory
   (expand-file-name (concat user-emacs-directory ".cache/"))
   "Emacs cache directory.")
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(add-to-list 'load-path "~/.emacs.d/site-lisp")
 
-;;(global-hl-line-mode 1)
+(global-hl-line-mode 1)
 
 
 ;; Require package
@@ -35,24 +32,20 @@
 ;;(require 'init-markdown) ;markdown
 
 (provide 'init)
-;(custom-set-variables
-; '(package-selected-packages
-;   '(doom-themes all-the-icons which-key use-package rainbow-delimiters neotree lsp-ui lsp-ivy ivy-rich highlight-symbol dashboard counsel-projectile amx ace-window))
-; '(tabbar-separator '(1.5)))
-;(custom-set-faces
-; )
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(general lsp-metals lsp-java go-complete tern-auto-complete company-lua lsp-mode jedi modus-themes lsp-pyright pyvenv counsel-etags yaml-mode dtrt-indent tabbar-ruler window-numbering which-key use-package treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil tabbar rainbow-delimiters neotree lsp-ui lsp-ivy ivy-rich highlight-symbol dashboard darkokai-theme counsel-projectile amx all-the-icons))
- '(tabbar-separator '(1.5))
- '(warning-suppress-types '((emacs) (emacs) (emacs))))
-(custom-set-faces
+ ;;'(package-selected-packages
+ ;;  '(general lsp-metals lsp-java go-complete tern-auto-complete company-lua lsp-mode jedi modus-themes lsp-pyright pyvenv counsel-etags yaml-mode dtrt-indent tabbar-ruler window-numbering which-key use-package treemacs-projectile treemacs-persp  treemacs-icons-dired treemacs-evil tabbar rainbow-delimiters neotree lsp-ui lsp-ivy ivy-rich highlight-symbol dashboard darkokai-theme counsel-projectile amx all-the-icons))
+ ;;'(tabbar-separator '(1.5))
+ ;;'(warning-suppress-types '((emacs) (emacs) (emacs)))
+ )
+;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+;; )
