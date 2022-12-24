@@ -29,7 +29,7 @@
 ;;  :init (global-undo-tree-mode))
 
 
-;;C-x M-g 调用 magit-dispatch，会列出来所有可以调用的子命令，选中后再输入一些可选的选项和接下来的命令，就和正常输入 git 的命令一样。
+;;git插件
 ;;(use-package magit
 ;;  :ensure t)
 
