@@ -1,4 +1,4 @@
-;;; init-ivy.el --- ivy configuration -*- coding: utf-8; lexical-binding: t -*
+;;; init-ivy.el
 (use-package ivy
   :ensure t
   :diminish ivy-mode

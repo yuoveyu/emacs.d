@@ -1,23 +1,21 @@
 (setq gc-cons-threshold most-positive-fixnum)
+(setq message-log-max t) 
 (setq debug-on-error nil)
-;; Load path
+
 (defconst emacs-cache-directory
   (expand-file-name (concat user-emacs-directory ".cache/"))
   "Emacs cache directory.")
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-(global-hl-line-mode 1)
-
-
 ;; Require package
 (require 'init-elpa) ; 下载源
 (require 'init-start) ; 启动页面
+(require 'init-settings) ;设置
 (require 'init-evil)  ;vim
 (require 'init-key) ; key
 (require 'init-ivy)  ; ivy
 (require 'init-window) ;窗口
-(require 'init-settings) ;设置
 (require 'init-file)  ;文件和文件树
 (require 'init-theme) ;主题
 ;;(require 'init-lsp)  ;lsp

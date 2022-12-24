@@ -11,7 +11,6 @@
 
 (defconst *is-mac* (eq system-type 'darwin)) 
 (defconst *is-linux* (eq system-type 'gnu/linux)) 
-(defconst *is-windows* (or (eq system-type 'ms-dos) (eq system-type 'windows-nt)))
 ;mac command键设置为meta
 (when *is-mac* 
     (setq mac-command-modifier 'meta)
@@ -25,6 +24,8 @@
 
 (menu-bar-mode -1) 
 (tool-bar-mode -1)
+(cua-mode t)
+;;(global-hl-line-mode 1)
 
 ;;开启鼠标支持
 (xterm-mouse-mode 1) 
@@ -36,6 +37,6 @@
 (setq make-backup-files nil)
 
 ;关掉启动界面
-(setq inhibit-startup-screen t)
+;;(setq inhibit-startup-screen t)
 
 (provide 'init-settings)
