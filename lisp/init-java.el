@@ -1,4 +1,9 @@
+;;; init-java.el --- java config -*- lexical-binding: t -*-
+;;; Commentary:
 
+;;; This file java the configuration
+
+;;; Code:
 
 (use-package lsp-java
 :ensure t
@@ -16,3 +21,9 @@
 
 
 (provide 'init-java)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-java.el ends here

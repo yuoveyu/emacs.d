@@ -1,3 +1,10 @@
+;;; init-ivy.el --- ivy config -*- lexical-binding: t -*-
+;;; Commentary:
+
+;;; This file ivy the configuration
+
+;;; Code:
+
 ;;; init-ivy.el
 (use-package ivy
   :ensure t
@@ -24,6 +31,15 @@
   :ensure t
   :hook (ivy-mode . ivy-rich-mode))
 
+
+
+;;; init-evil.el --- evil config -*- lexical-binding: t -*-
+;;; Commentary:
+
+;;; This file evil the configuration
+
+;;; Code:
+
 (use-package counsel
   :ensure t
   :diminish ivy-mode counsel-mode
@@ -42,3 +58,9 @@
 
 
 (provide 'init-ivy)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-ivy.el ends here

@@ -1,9 +1,15 @@
+;;; init-code.el --- 代码相关配置 -*- lexical-binding: t -*-
+;;; Commentary:
+
+;;; This file theme the configuration
+
+;;; Code:
 
 (use-package company
   :ensure t
   :init (global-company-mode)
   :config
-  (setq company-minimum-prefix-length 1) ; 只需敲 1 个字母就开始进行自动补全
+  (setq company-minimum-prefix-length 1) ;; 只需敲 1 个字母就开始进行自动补全
   (setq company-tooltip-align-annotations t)
   (setq company-idle-delay 0.0)
   (setq company-show-numbers t) ;; 给选项编号 (按快捷键 M-1、M-2 等等来进行选择).
@@ -61,7 +67,7 @@
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l"
 	lsp-file-watch-threshold 500)
-  :hook 
+  :hook
   (lsp-mode . lsp-enable-which-key-integration) ; which-key integration
   :commands (lsp lsp-deferred)
   :config
@@ -96,3 +102,9 @@
 
 
 (provide 'init-code)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-code.el ends here

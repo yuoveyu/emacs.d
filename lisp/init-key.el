@@ -1,3 +1,10 @@
+;;; init-key.el --- key config -*- lexical-binding: t -*-
+;;; Commentary:
+
+;;; This file key the configuration
+
+;;; Code:
+
 (use-package general
   :ensure t
   :init
@@ -68,6 +75,13 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "!" 'shell-command
     ":" 'counsel-M-x
     "-" 'counsel-M-x
+    "0" 'select-window-0
+    "1" 'select-window-1
+    "2" 'select-window-2
+    "3" 'select-window-3
+    "4" 'select-window-4
+    "5" 'select-window-5
+    "6" 'select-window-6
     "SPC" 'execute-extended-command
     "x" 'scratch-buffer
     "TAB" 'spacemacs/alternate-buffer
@@ -76,6 +90,7 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "u" 'universal-argument
     "v" 'er/expand-region
     ";" 'vterm
+    "g" 'keyboard-quit
     "`" 'multi-vterm-project
    )
 
@@ -169,7 +184,7 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "c" 'project-compile
     "x" 'project-forget-project)
 
-   (+general-global-menu! "view" "v" 
+   (+general-global-menu! "view" "v"
     "a" 'ivy-push-view
     "r" 'ivy-pop-view
     "s" 'ivy-switch-view)
@@ -186,7 +201,7 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "r"  'treemacs-remove-project-from-workspace
     "a"  'treemacs-add-project)
 
- (+general-global-menu! "window" "w" 
+ (+general-global-menu! "window" "w"
     "0" 'select-window-0
     "1" 'select-window-1
     "2" 'select-window-2
@@ -200,14 +215,20 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "d" 'delete-window
     "=" 'balance-windows-area)
 
-;;meghanada-exec-main  :exit t) 
-;;meghanada-compile-file :exit t) 
-;;meghanada-jump-declaration :exit t) 
+;;meghanada-exec-main  :exit t)
+;;meghanada-compile-file :exit t)
+;;meghanada-jump-declaration :exit t)
 ;;"执行当前函数") . dap-java-debug)
 ;;"编译类的代码") . lsp-java-build-project)
 ;;"跳转到对应类") . lsp-goto-implementation
 ;;("f" . "格式化代码") . gofmt)
 ;;"go-remove-unused-imports") . go-remove-unused-imports)
 ;;"跳转到对应类") . godef-jump)
-;;"返回前面的类") . pop-tag-mark) 
+;;"返回前面的类") . pop-tag-mark)
 (provide 'init-key)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-key.el ends here

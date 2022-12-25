@@ -1,3 +1,10 @@
+;;; init-markdown.el --- markdown config -*- lexical-binding: t -*-
+;;; Commentary:
+
+;;; This file markdown the configuration
+
+;;; Code:
+
 (use-package markdown-mode
   :ensure t
   :commands (markdown-mode gfm-mode)
@@ -16,3 +23,9 @@
 ;C-c C-c p 预览调用markdown命令
 
 (provide 'init-markdown)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-markdown.el ends here

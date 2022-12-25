@@ -1,3 +1,10 @@
+;;; init-org.el --- org config -*- lexical-binding: t -*-
+;;; Commentary:
+
+;;; This file org the configuration
+
+;;; Code:
+
 ;;(setq org-directory "~/dir/yulove/org/")
 (setq org-log-done 'time)
 (setq org-log-done 'note)
@@ -23,7 +30,7 @@
 ;;  :hook (org-mode . org-superstar-mode)
 ;;  :custom
 ;;    ( with-eval-after-load  'org-superstar)
-    ;;(org-superstar-headline-bullets-list '("○" "⚙" "✡" "◈" "▷" "◇" "✙" "✤" "✥" "◌" "⊙" "♢" "◉"))"☰" "☷" "✿" 
+;;    (org-superstar-headline-bullets-list '("○" "⚙" "✡" "◈" "▷" "◇" "✙" "✤" "✥" "◌" "⊙" "♢" "◉"))"☰" "☷" "✿"
 ;;    (org-superstar-headline-bullets-list '("▷" "☷" "✿" "✙"))
 ;;    (org-superstar-cycle-headline-bullets nil )
     ;; This is usually the default, but keep in mind it must be nil
@@ -70,8 +77,8 @@
 ))
 
 ;; Collect all .org from my Org directory and subdirs
-(load-library "find-lisp")
-(setq org-agenda-files (find-lisp-find-files "~/dir/yulove/org/" "\.org$"))
+;;(load-library "find-lisp")
+;;(setq org-agenda-files (find-lisp-find-files "~/dir/yulove/org/" "\.org$"))
 
 
 (setq org-agenda-inhibit-startup t) ;; ~50x speedup
@@ -95,3 +102,9 @@
         org-insert-heading-respect-content t)
 
 (provide 'init-org)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-org.el ends here

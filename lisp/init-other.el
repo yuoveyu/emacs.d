@@ -1,3 +1,10 @@
+;;; init-other.el --- other config -*- lexical-binding: t -*-
+;;; Commentary:
+
+;;; This file other the configuration
+
+;;; Code:
+
 ;;字体图标
 (use-package all-the-icons
    :ensure t)
@@ -45,3 +52,9 @@
 
 
 (provide 'init-other)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-other.el ends here

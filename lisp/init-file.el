@@ -1,4 +1,9 @@
-;;;init-file
+;;; init-file.el --- file config -*- lexical-binding: t -*-
+;;; Commentary:
+
+;;; This file file the configuration
+
+;;; Code:
 
 ;;项目管理
 (use-package projectile
@@ -102,3 +107,9 @@
 
 
 (provide 'init-file)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-file.el ends here

@@ -1,5 +1,10 @@
+;;; init-window.el --- window config -*- lexical-binding: t -*-
+;;; Commentary:
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;tabbar设置start;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; This file window the configuration
+
+;;; Code:
+
 ;;windows 编号
 (use-package window-numbering
   :ensure t)
@@ -116,3 +121,9 @@
     (advice-add #'keyboard-quit :before #'popper-close-window-hack)))
 
 (provide 'init-window)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-window.el ends here
