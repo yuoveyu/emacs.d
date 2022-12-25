@@ -46,8 +46,13 @@
   :init
   :config)
 
-
-
+(use-package bing-dict
+  :ensure t
+  :config
+    (setq bing-dict-vocabulary-file "/opt/dir/yulove/org/english.org")
+    (setq bing-dict-vocabulary-save t)
+    (setq bing-dict-cache-auto-save t)
+)
 
 
 

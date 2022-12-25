@@ -83,6 +83,7 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "5" 'select-window-5
     "6" 'select-window-6
     "SPC" 'execute-extended-command
+    "y" 'bing-dict-brief
     "x" 'scratch-buffer
     "TAB" 'spacemacs/alternate-buffer
     "'" 'vertico-repeat
@@ -127,10 +128,9 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "s"  'save-buffer
     "S" 'save-some-buffers
     "x"  'kill-region
+    "V"  'browse-kill-ring
     "v"  'yank)
   )
-
-  
 
   (+general-global-menu! "file" "f"
 
