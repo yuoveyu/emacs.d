@@ -55,9 +55,14 @@
 
 (use-package xclip
   :ensure t
-  :init (xclip-mode)
-(provide 'init-settings)
+  :init (xclip-mode))
 
+
+(use-package browse-kill-ring
+  :ensure t)
+
+
+(provide 'init-settings)
 
 
 ;; Local Variables:
