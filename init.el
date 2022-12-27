@@ -35,6 +35,17 @@
 (require 'init-other) ;other
 ;;(require 'init-markdown) ;markdown
 
+
+(if window-system
+      (progn
+	(add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
+	(require 'eaf)
+	(require 'eaf-terminal)
+	(require 'eaf-browser)
+	(require 'eaf-video-player)
+	(require 'eaf-file-manager) 
+	(require 'eaf-pdf-viewer)))
+
 (provide 'init)
 
 (custom-set-variables

@@ -31,3 +31,5 @@ eclipse.jdt.ls
 workspace
 .lsp-session-v1
 var
+emacs-application-framework
+eaf

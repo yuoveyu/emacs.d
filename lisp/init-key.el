@@ -108,7 +108,21 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "k" 'kill-buffer
     "y" 'copy-buffer-name
     "K" 'kill-other-buffers
+
+    "1" 'sort-tab-yu-1
+    "2" 'sort-tab-yu-2
+    "3" 'sort-tab-yu-3
+    "4" 'sort-tab-yu-4
+    "5" 'sort-tab-yu-5
     )
+ 
+   (+general-global-menu! "buffer-prev" "B"
+     
+    "1" 'sort-tab-su-1
+    "2" 'sort-tab-su-2
+    "3" 'sort-tab-su-3
+    "4" 'sort-tab-su-4
+    "5" 'sort-tab-su-5)
 
    (+general-global-menu! "code" "c"
 

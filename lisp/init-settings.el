@@ -37,6 +37,8 @@
 (scroll-bar-mode -1)
 (cua-mode t)
 (global-hl-line-mode 1)
+(setq visible-bell 1)
+
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 
 ;;开启鼠标支持
