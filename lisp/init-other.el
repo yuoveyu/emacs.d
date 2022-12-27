@@ -37,8 +37,8 @@
 
 
 ;;git插件
-;;(use-package magit
-;;  :ensure t)
+(use-package magit
+  :ensure t)
 
 (use-package marginalia
   :ensure t
