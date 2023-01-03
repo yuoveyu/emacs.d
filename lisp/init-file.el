@@ -1,13 +1,18 @@
-;;;init-file
+;;; init-file.el --- file config -*- lexical-binding: t -*-
+;;; Commentary:
 
+;;; This file file the configuration
+
+;;; Code:
 
 ;;项目管理
 (use-package projectile
   :ensure t
-  :bind (("C-c p" . projectile-command-map))
+  ;;:bind (("C-c p" . projectile-command-map))
   :config
   (setq projectile-mode-line "Projectile")
-  (setq projectile-track-known-projects-automatically nil))
+  (setq projectile-track-known-projects-automatically nil)
+)
 
 (use-package counsel-projectile
   :ensure t
@@ -17,9 +22,6 @@
 (use-package treemacs
   :ensure t
   :defer t
-  :init
-  (with-eval-after-load 'winum
-    (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
   :config
   (progn
     (setq treemacs-collapse-dirs                 (if treemacs-python-executable 3 0)
@@ -92,9 +94,6 @@
   :ensure t
   :config (treemacs-icons-dired-mode))
 
-(use-package treemacs-magit
-  :after treemacs magit
-  :ensure t)
 
 (use-package treemacs-persp
   :after treemacs persp-mode
@@ -108,3 +107,9 @@
 
 
 (provide 'init-file)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-file.el ends here

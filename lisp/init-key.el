@@ -1,14 +1,12 @@
+;;; init-key.el --- key config -*- lexical-binding: t -*-
+;;; Commentary:
 
+;;; This file key the configuration
 
-(global-set-key (kbd "s-a") 'mark-whole-buffer) ;;对应Windows上面的Ctrl-a 全选
-(global-set-key (kbd "s-c") 'kill-ring-save) ;;对应Windows上面的Ctrl-c 复制
-(global-set-key (kbd "s-s") 'save-buffer) ;; 对应Windows上面的Ctrl-s 保存
-(global-set-key (kbd "s-v") 'yank) ;对应Windows上面的Ctrl-v 粘贴
-(global-set-key (kbd "s-z") 'undo) ;对应Windows上面的Ctrol-z 撤销
-(global-set-key (kbd "s-x") 'kill-region) ;对应Windows上面的Ctrol-x 剪切
-
+;;; Code:
 
 (use-package general
+  :ensure t
   :init
   (with-eval-after-load 'evil
     (general-add-hook 'after-init-hook
@@ -69,7 +67,6 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
 
 
 
-
 (use-package general
   :init
   (general-emacs-define-key 'global [remap imenu] 'consult-imenu)
@@ -77,7 +74,16 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
   (global-definer
     "!" 'shell-command
     ":" 'counsel-M-x
+    "-" 'counsel-M-x
+    "0" 'select-window-0
+    "1" 'select-window-1
+    "2" 'select-window-2
+    "3" 'select-window-3
+    "4" 'select-window-4
+    "5" 'select-window-5
+    "6" 'select-window-6
     "SPC" 'execute-extended-command
+    "y" 'bing-dict-brief
     "x" 'scratch-buffer
     "TAB" 'spacemacs/alternate-buffer
     "'" 'vertico-repeat
@@ -85,6 +91,7 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "u" 'universal-argument
     "v" 'er/expand-region
     ";" 'vterm
+    "g" 'keyboard-quit
     "`" 'multi-vterm-project
    )
 
@@ -92,23 +99,75 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
   (+general-global-menu! "buffer" "b"
     "d" 'kill-current-buffer
     "b" '(switch-to-buffer :which-key "switch buffer")
-    "B" '(consult-buffer :which-key "consult buffer")
     "p" 'previous-buffer
     "R" 'rename-buffer
     "M" '((lambda () (interactive) (switch-to-buffer "*Messages*"))
           :which-key "messages-buffer")
     "n" 'next-buffer
     "i" 'ibuffer
-    "f" 'my-open-current-directory
     "k" 'kill-buffer
     "y" 'copy-buffer-name
     "K" 'kill-other-buffers
-    )
 
-  (+general-global-menu! "layout" "l"
+    "1" 'sort-tab-yu-1
+    "2" 'sort-tab-yu-2
+    "3" 'sort-tab-yu-3
+    "4" 'sort-tab-yu-4
+    "5" 'sort-tab-yu-5
+    )
+ 
+   (+general-global-menu! "buffer-prev" "B"
+     
+    "1" 'sort-tab-su-1
+    "2" 'sort-tab-su-2
+    "3" 'sort-tab-su-3
+    "4" 'sort-tab-su-4
+    "5" 'sort-tab-su-5)
+
+   (+general-global-menu! "code" "c"
+
+    "i"  'eglot-find-implementation
+    "d"  'eglot-find-declaration
+    "u"  'eglot-find-typeDefinition
+    "m"  'eglot-java-run-main
+    "b"  'pop-tag-mark
+   )
+ 
+
+  (+general-global-menu! "edit" "e"
+
+    "a"  'mark-whole-buffer
+    "c"  'kill-ring-save
+    "u"  'undo
+    "s"  'save-buffer
+    "S" 'save-some-buffers
+    "x"  'kill-region
+    "V"  'browse-kill-ring
+    "v"  'yank)
+  )
+
+  (+general-global-menu! "file" "f"
 
     "l" 'avy-goto-line
     "c" 'avy-goto-char
+
+    "f" 'find-file
+    "r" 'consult-recent-file
+    "L" 'consult-locate
+    "d" 'consult-dir
+    "w" 'sudo-edit
+    "j" 'dired-jump
+    "y" 'copy-file-name)
+
+
+ (+general-global-menu! "file" "F"
+    "s" 'select-frame-by-name
+    "f" 'find-file-other-frame
+    "b" 'switch-to-buffer-other-frame
+    "d" 'delete-frame
+ )
+
+ (+general-global-menu! "layout" "l"
 
     "l" 'persp-switch
     "L" 'persp-state-load
@@ -119,62 +178,9 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "R" 'persp-remove-buffer
     "k" 'persp-kill)
 
-  (+general-global-menu! "file" "f"
-    "f" 'find-file
-    "r" 'consult-recent-file
-    "L" 'consult-locate
-    "d" 'consult-dir
-    "ed" 'open-my-init-file
-    "s" 'save-buffer
-    "w" 'sudo-edit
-    "S" 'save-some-buffers
-    "j"  'dired-jump
-    "y" 'copy-file-name
-    "R" 'my/rename-current-buffer-file
-    "k" 'my/delete-file-and-buffer
-    "!" 'my/exec-shell-on-buffer)
 
-  (+general-global-menu! "window" "w"
-    "0" 'select-window-0
-    "1" 'select-window-1
-    "2" 'select-window-2
-    "3" 'select-window-3
-    "4" 'select-window-4
-    "5" 'select-window-5
-    "/" 'split-window-right
-    "-" 'split-window-below
-    "m" 'delete-other-windows
-    "u" 'winner-undo
-    "z" 'winner-redo
-    "w" 'esw/select-window
-    "s" 'esw/swap-two-windows
-    "d" 'esw/delete-window
-    "=" 'balance-windows-area
-    "r" 'esw/move-window
-    "x" 'resize-window
-    "H" 'buf-move-left
-    "L" 'buf-move-right
-    "J" 'buf-move-down
-    "K" 'buf-move-up)
-
-  (+general-global-menu! "toggle" "t"
-
-    "s" 'flycheck-mode
-    "S" 'flyspell-prog-mode
-    "e" 'toggle-corfu-english-helper
-    "n" 'my-toggle-line-numbber
-    "w" 'distraction-free
-    "l" 'my/enable-lsp-bridge
-    "k" '+toggle-keycast
-    "c" 'global-corfu-mode
-    "m" 'consult-minor-mode-menu)
-
-  (+general-global-menu! "toggle" "T"
-
-    "t"  'treemacs
-    "p"  'treemacs-projectile
-    "r"  'treemacs-remove-project-from-workspace
-    "a"  'treemacs-add-project)
+  (+general-global-menu! "org-mode" "o"
+    "a"  'org-agenda)
 
 
   (+general-global-menu! "project" "p"
@@ -192,7 +198,51 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "c" 'project-compile
     "x" 'project-forget-project)
 
-  )
+   (+general-global-menu! "view" "v"
+    "a" 'ivy-push-view
+    "r" 'ivy-pop-view
+    "s" 'ivy-switch-view)
+  
 
+   (+general-global-menu! "toggle" "t"
+    "s" 'flycheck-mode)
 
+  (+general-global-menu! "toggle" "T"
+    "t"  'treemacs
+    "s"  'treemacs-switch-workspace
+    "c"  'treemacs-create-workspace
+    "p"  'treemacs-projectile
+    "r"  'treemacs-remove-project-from-workspace
+    "a"  'treemacs-add-project)
+
+ (+general-global-menu! "window" "w"
+    "0" 'select-window-0
+    "1" 'select-window-1
+    "2" 'select-window-2
+    "3" 'select-window-3
+    "4" 'select-window-4
+    "5" 'select-window-5
+    "6" 'select-window-6
+    "/" 'split-window-right
+    "-" 'split-window-below
+    "o" 'delete-other-windows
+    "d" 'delete-window
+    "=" 'balance-windows-area)
+
+;;meghanada-exec-main  :exit t)
+;;meghanada-compile-file :exit t)
+;;meghanada-jump-declaration :exit t)
+;;"执行当前函数") . dap-java-debug)
+;;"编译类的代码") . lsp-java-build-project)
+;;"跳转到对应类") . lsp-goto-implementation
+;;("f" . "格式化代码") . gofmt)
+;;"go-remove-unused-imports") . go-remove-unused-imports)
+;;"跳转到对应类") . godef-jump)
+;;"返回前面的类") . pop-tag-mark)
 (provide 'init-key)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-key.el ends here

@@ -1,3 +1,10 @@
+;;; init-other.el --- other config -*- lexical-binding: t -*-
+;;; Commentary:
+
+;;; This file other the configuration
+
+;;; Code:
+
 ;;字体图标
 (use-package all-the-icons
    :ensure t)
@@ -29,15 +36,30 @@
 ;;  :init (global-undo-tree-mode))
 
 
-;;C-x M-g 调用 magit-dispatch，会列出来所有可以调用的子命令，选中后再输入一些可选的选项和接下来的命令，就和正常输入 git 的命令一样。
+;;git插件
 (use-package magit
   :ensure t)
 
+(use-package marginalia
+  :ensure t
+  :hook (after-init . marginalia-mode)
+  :init
+  :config)
 
-
-
-
+(use-package bing-dict
+  :ensure t
+  :config
+    (setq bing-dict-vocabulary-file "/opt/dir/yulove/org/english.org")
+    (setq bing-dict-vocabulary-save t)
+    (setq bing-dict-cache-auto-save t)
+)
 
 
 
 (provide 'init-other)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-other.el ends here

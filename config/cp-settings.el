@@ -66,10 +66,7 @@
   (message aaa )
 )
 
-
-
 (defun yu-dir (dir)
-
   (let ((filelist (list-directory-tree dir)))
     (dolist (filename filelist)
       (message filename)

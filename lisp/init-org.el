@@ -1,36 +1,46 @@
-(setq org-directory "~/dir/yulove/org/")
+;;; init-org.el --- org config -*- lexical-binding: t -*-
+;;; Commentary:
 
-(setq org-startup-indented t)
+;;; This file org the configuration
 
+;;; Code:
+
+;;(setq org-directory "~/dir/yulove/org/")
 (setq org-log-done 'time)
 (setq org-log-done 'note)
+
+(use-package org-pomodoro
+  :ensure t
+  :commands org-pomodoro
+  :after org)
 
 
 (use-package evil-org
   :ensure t
-  :hook (org-mode . evil-org-mode)
   :after org
+  :hook (org-mode . (lambda () evil-org-mode))
   :config
   (require 'evil-org-agenda)
   (evil-org-agenda-set-keys))
   
-(use-package org-superstar
-  :ensure t
-  :after org
-  :hook (org-mode . org-superstar-mode)
-  :custom
-    ( with-eval-after-load  'org-superstar)
-    (org-superstar-headline-bullets-list '("☰" "☷" "✿" "☭"))
-    (org-superstar-cycle-headline-bullets nil )
+     
+;;(use-package org-superstar
+;;  :ensure t
+;;  :after orgdd
+;;  :hook (org-mode . org-superstar-mode)
+;;  :custom
+;;    ( with-eval-after-load  'org-superstar)
+;;    (org-superstar-headline-bullets-list '("○" "⚙" "✡" "◈" "▷" "◇" "✙" "✤" "✥" "◌" "⊙" "♢" "◉"))"☰" "☷" "✿"
+;;    (org-superstar-headline-bullets-list '("▷" "☷" "✿" "✙"))
+;;    (org-superstar-cycle-headline-bullets nil )
     ;; This is usually the default, but keep in mind it must be nil
-    (setq org-hide-leading-stars nil)
+;;    (setq org-hide-leading-stars nil)
     ;; This line is necessary.
-    (setq org-superstar-leading-bullet ?\s)
+;;    (setq org-superstar-leading-bullet ?\s)
     ;; If you use Org Indent you also need to add this, otherwise the
     ;; above has no effect while Indent is enabled.
-    (setq org-indent-mode-turns-on-hiding-stars nil)
-
-  )
+;;    (setq org-indent-mode-turns-on-hiding-stars nil)
+;;  )
 
 (use-package org-appear
   :ensure t
@@ -55,7 +65,7 @@
 
 ;; 设置任务流程(这是我的配置)
 (setq org-todo-keywords
-      '((sequence "TODO(t!)" "DOING(t!)" "WAIT(w!)" "|" "DONE(d!)" "CANCEL(a@/!)")))
+      '((sequence "TODO(t!)" "DOING(t!)" "WAIT(w!)" "|" "DONE(d!)" "CANCLE(a@/!)")))
 
 ;; 设置任务样式
 (setq org-todo-keyword-faces
@@ -63,20 +73,38 @@
     ("WAIT" .   (:foreground "red" :weight bold))
     ("DOING" .      (:foreground "orange" :weight bold))
     ("DONE" .      (:foreground "green" :weight bold))
-    ("CANCEL" .     (:background "gray" :foreground "black"))
+    ("CANCLE" .     (:background "gray" :foreground "black"))
 ))
 
 ;; Collect all .org from my Org directory and subdirs
-(load-library "find-lisp")
-(setq org-agenda-files (find-lisp-find-files "~/dir/yulove/org/" "\.org$"))
+;;(load-library "find-lisp")
+;;(setq org-agenda-files (find-lisp-find-files "~/dir/yulove/org/" "\.org$"))
 
 
 (setq org-agenda-inhibit-startup t) ;; ~50x speedup
-(setq org-agenda-span 'day)
-(setq org-agenda-use-tag-inheritance nil) ;; 3-4x speedup
 (setq org-agenda-window-setup 'current-window)
-(setq org-log-done t)
 
 
+(use-package org-bullets
+  :ensure)
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+
+
+(add-hook 'org-mode-hook
+          (lambda ()
+            (org-indent-mode t))
+          t)
+
+(setq org-M-RET-may-split-line nil
+        ;; insert new headings after current subtree rather than inside it
+        org-insert-heading-respect-content t)
 
 (provide 'init-org)
+
+;; Local Variables:
+;; coding: utf-8
+;; no-byte-compile: t
+;; End:
+;;; init-org.el ends here

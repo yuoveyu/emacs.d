@@ -437,21 +437,63 @@
    
       (nth (+ 0 index) sort-tab-visible-buffers)))
 
+;;(defun sort-tab-yu-1()
+;;  (interactive)
+;;  (switch-to-buffer (sort-tab-get-next-buffer-2 1)))
+(defun sort-tab-yu(number)
+  (setq sortIndex 0)
+  (while (< sortIndex number)
+    ;;(incf sortIndex)
+    (message "%d" sortIndex)
+    (switch-to-buffer (sort-tab-get-next-buffer))
+    (setq sortIndex (+ sortIndex 1))
+    ))
+
+
+(defun sort-tab-su(number)
+  (setq sortIndex 0)
+  (while (< sortIndex number)
+    ;;(incf sortIndex)
+    (message "%d" sortIndex)
+    (switch-to-buffer (sort-tab-get-prev-buffer))
+    (setq sortIndex (+ sortIndex 1))
+	))
+
 (defun sort-tab-yu-1()
   (interactive)
-  (switch-to-buffer (sort-tab-get-next-buffer-2 1)))
-
+  (sort-tab-yu 1))
 (defun sort-tab-yu-2()
   (interactive)
-  (switch-to-buffer (sort-tab-get-next-buffer-2 2)))
-
+  (sort-tab-yu 2))
 (defun sort-tab-yu-3()
   (interactive)
-  (switch-to-buffer (sort-tab-get-next-buffer-2 3)))
-
+  (sort-tab-yu 3))
 (defun sort-tab-yu-4()
   (interactive)
-  (switch-to-buffer (sort-tab-get-next-buffer-2 4)))
+  (sort-tab-yu 4))
+
+(defun sort-tab-yu-5()
+  (interactive)
+  (sort-tab-yu 5))
+
+
+(defun sort-tab-su-1()
+  (interactive)
+  (sort-tab-su 1))
+(defun sort-tab-su-2()
+  (interactive)
+  (sort-tab-su 2))
+(defun sort-tab-su-3()
+  (interactive)
+  (sort-tab-su 3))
+(defun sort-tab-yu-4()
+  (interactive)
+  (sort-tab-su 4))
+(defun sort-tab-su-5()
+  (interactive)
+  (sort-tab-su 5))
+
+
 
 (defun sort-tab-select-first-tab ()
   (interactive)
