@@ -6,8 +6,9 @@
 ;;; Code:
 
 ;;字体图标
-(use-package all-the-icons
-   :ensure t)
+(if window-system
+  (use-package all-the-icons
+   :ensure t))
 
 ;;常用命令排前面
 (use-package amx
@@ -46,10 +47,22 @@
   :init
   :config)
 
+
+(if window-system
+      (progn
+	(add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
+	(require 'eaf)
+	(require 'eaf-terminal)
+	(require 'eaf-browser)
+	(require 'eaf-video-player)
+	(require 'eaf-file-manager) 
+	(require 'eaf-pdf-viewer)))
+
+;;必应字典
 (use-package bing-dict
   :ensure t
   :config
-    (setq bing-dict-vocabulary-file "/opt/dir/yulove/org/english.org")
+    (setq bing-dict-vocabulary-file "/opt/dir/yulove/english.org")
     (setq bing-dict-vocabulary-save t)
     (setq bing-dict-cache-auto-save t)
 )

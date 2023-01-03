@@ -101,6 +101,14 @@
         ;; insert new headings after current subtree rather than inside it
         org-insert-heading-respect-content t)
 
+
+;;通过函数触发org files to agenda
+(defun yu-org()
+ (interactive)
+ (setq org-directory "~/dir/yulove/org")
+ (setq org-agenda-files (list org-directory))
+)
+
 (provide 'init-org)
 
 ;; Local Variables:
