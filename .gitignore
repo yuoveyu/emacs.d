@@ -33,3 +33,4 @@ workspace
 var
 emacs-application-framework
 eaf
+.local
