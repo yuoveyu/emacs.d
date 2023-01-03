@@ -55,9 +55,9 @@
 
 (setq x-select-enable-clipboard t)
 
-(use-package xclip
-  :ensure t
-  :init (xclip-mode))
+;;(use-package xclip
+;;  :ensure t
+;;  :init (xclip-mode))
 
 
 (use-package browse-kill-ring
