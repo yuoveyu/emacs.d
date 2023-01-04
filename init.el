@@ -39,8 +39,8 @@
 (require-init 'init-window t) ;窗口
 (require-init 'init-file t)  ;文件和文件树
 (require-init 'init-theme t) ;主题
-;;(require 'init-code);
-;;(require 'init-java)  ;java
+(require-init 'init-code t);
+(require-init 'init-java t)  ;java
 ;;(require 'init-python)  ;python
 ;;(require 'init-go)  ;go
 ;;(require 'init-web)  ;web
