@@ -6,6 +6,7 @@
 ;;; Code:
 
 (setq gc-cons-threshold most-positive-fixnum)
+(setq file-name-handler-alist nil)
 (setq message-log-max t)
 (setq debug-on-error nil)
 
@@ -13,40 +14,47 @@
   (expand-file-name (concat user-emacs-directory ".cache/"))
   "Emacs cache directory.")
 
-;;(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path "~/.emacs.d/site-lisp/lazy-load") ; add sort-tab to your load-path
+(require 'lazy-load)
 
-(defconst my-emacs-d (file-name-as-directory user-emacs-directory)
-  "Directory of emacs.d.")
-
-(defconst my-lisp-dir (concat my-emacs-d "lisp")
-  "Directory of personal configuration.")
-
-;; Light weight mode, fewer packages are used.
-(setq my-lightweight-mode-p (and (boundp 'startup-now) (eq startup-now t)))
-
-(defun require-init (pkg &optional maybe-disabled)
-  "Load PKG if MAYBE-DISABLED is nil or it's nil but start up in normal slowly."
-  (when (or (not maybe-disabled) (not my-lightweight-mode-p))
-    (load (file-truename (format "%s/%s" my-lisp-dir pkg)) t t)))
 
 ;; Require package
-(require-init 'init-elpa t) ; 下载源
-(require-init 'init-start t) ; 启动页面
-(require-init 'init-settings t) ;设置
-(require-init 'init-evil t)  ;vim
-(require-init 'init-key t) ; key
-(require-init 'init-ivy t)  ; ivy
-(require-init 'init-window t) ;窗口
-(require-init 'init-file t)  ;文件和文件树
-(require-init 'init-theme t) ;主题
-(require-init 'init-code t);
-(require-init 'init-java t)  ;java
+(require 'init-elpa) ; 下载源
+(require 'init-start) ; 启动页面
+(require 'init-settings) ;设置
+(require 'init-evil)  ;vim
+(require 'init-key) ; key
+(require 'init-ivy)  ; ivy
+(require 'init-window) ;窗口
+(require 'init-file)  ;文件和文件树
+(require 'init-theme) ;主题
+
+;;(require-init 'init-code t);
+(lazy-load-global-keys
+ '(("C-c t c" . enable-code))
+ "init-code")
+
+(lazy-load-global-keys
+ '(("C-c t j" . enable-java))
+ "init-java")
+;;(require-init 'init-java t)  ;java
 ;;(require 'init-python)  ;python
 ;;(require 'init-go)  ;go
 ;;(require 'init-web)  ;web
 ;;(require 'init-js)  ;web
-(require-init 'init-org t) ;other
-(require-init 'init-other t) ;other
+(require 'init-org) ;other
+
+
+(require 'init-other) ;other
+(lazy-load-global-keys
+ '(("h" . enable-hightlight)
+   ("g" . enable-magit)
+   ("e" . enable-eaf)
+   ("b" . enable-bing-dict))
+ "init-other"
+ "C-c t")
+
 ;;(require 'init-markdown) ;markdown
 
 

@@ -5,19 +5,25 @@
 
 ;;; Code:
 
-(use-package lsp-java
-:ensure t
-:config (add-hook 'java-mode-hook 'lsp))
 
-;;(use-package dap-java
-;;:ensure t)
+(defun enable-java ()
+    "初始化java配置"
+     (interactive)
+    (use-package lsp-java
+    :ensure t
+    :config (add-hook 'java-mode-hook 'lsp))
 
-;;(use-package lsp-java-boot
-;;:ensure t)
+    ;;(use-package dap-java
+    ;;:ensure t)
 
-;; to enable the lenses
-(add-hook 'lsp-mode-hook #'lsp-lens-mode)
-(add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
+    ;;(use-package lsp-java-boot
+    ;;:ensure t)
+
+    ;; to enable the lenses
+    (add-hook 'lsp-mode-hook #'lsp-lens-mode)
+    (add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
+)
+
 
 
 (provide 'init-java)

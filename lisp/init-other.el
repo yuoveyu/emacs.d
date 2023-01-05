@@ -21,10 +21,13 @@
 
 
 ;;高亮当前Buffer 中所有的、与光标所在处的符号相同的符号
-(use-package highlight-symbol
-  :ensure t
-  :init (highlight-symbol-mode)
-  :bind ("<f3>" . highlight-symbol)) ;; 按下 F3 键就可高亮当前符号
+(defun enable-hightlight ()
+  (interactive)
+  (use-package highlight-symbol
+    :ensure t
+    :init (highlight-symbol-mode)
+    :bind ("<f3>" . highlight-symbol)) ;; 按下 F3 键就可高亮当前符号
+)
 
 ;;括号颜色标记，good
 (use-package rainbow-delimiters
@@ -38,36 +41,44 @@
 
 
 ;;git插件
-(use-package magit
-  :ensure t)
+(defun enable-magit ()
+  (interactive)
+  (use-package magit
+    :ensure t)
+)
 
+;;一个为 Emacs minibuffer 中的选项添加注解的插件。
 (use-package marginalia
   :ensure t
   :hook (after-init . marginalia-mode)
   :init
   :config)
 
-
-(if window-system
-      (progn
-	(add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
-	(require 'eaf)
-	(require 'eaf-terminal)
-	(require 'eaf-browser)
-	(require 'eaf-video-player)
-	(require 'eaf-file-manager) 
-	(require 'eaf-pdf-viewer)))
-
-;;必应字典
-(use-package bing-dict
-  :ensure t
-  :config
-    (setq bing-dict-vocabulary-file "/opt/dir/yulove/english.org")
-    (setq bing-dict-vocabulary-save t)
-    (setq bing-dict-cache-auto-save t)
+;;eaf
+(defun enable-eaf ()
+  (interactive)
+  (if window-system
+        (progn
+    (add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
+    (require 'eaf)
+    (require 'eaf-terminal)
+    (require 'eaf-browser)
+    (require 'eaf-video-player)
+    (require 'eaf-file-manager) 
+    (require 'eaf-pdf-viewer)))
 )
 
-
+;;必应字典
+(defun enable-bing-dict ()
+  (interactive)
+  (use-package bing-dict
+    :ensure t
+    :config
+      (setq bing-dict-vocabulary-file "/opt/dir/yulove/english.org")
+      (setq bing-dict-vocabulary-save t)
+      (setq bing-dict-cache-auto-save t)
+  )
+)
 
 (provide 'init-other)
 

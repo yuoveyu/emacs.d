@@ -4,7 +4,6 @@
 ;;; This file key the configuration
 
 ;;; Code:
-
 (use-package general
   :ensure t
   :init
