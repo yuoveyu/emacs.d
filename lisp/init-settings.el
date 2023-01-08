@@ -34,8 +34,6 @@
 (electric-indent-mode 1)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-(when *is-linux*
-  (scroll-bar-mode -1))
 
 (if window-system
     (scroll-bar-mode -1))
