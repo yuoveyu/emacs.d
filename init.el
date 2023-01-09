@@ -35,10 +35,10 @@
  '(("C-c t c" . enable-code))
  "init-code")
 
+(require 'init-java)  ;java
 (lazy-load-global-keys
  '(("C-c t j" . enable-java))
  "init-java")
-;;(require-init 'init-java t)  ;java
 ;;(require 'init-python)  ;python
 ;;(require 'init-go)  ;go
 ;;(require 'init-web)  ;web
