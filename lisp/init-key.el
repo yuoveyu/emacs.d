@@ -4,6 +4,8 @@
 ;;; This file key the configuration
 
 ;;; Code:
+
+
 (use-package general
   :ensure t
   :init
@@ -125,10 +127,13 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
 
    (+general-global-menu! "code" "c"
 
-    "i"  'eglot-find-implementation
-    "d"  'eglot-find-declaration
-    "u"  'eglot-find-typeDefinition
-    "m"  'eglot-java-run-main
+    ;;"i"  'eglot-find-implementation
+    ;;"d"  'eglot-find-declaration
+    ;;"u"  'eglot-find-typeDefinition
+    ;;"m"  'eglot-java-run-main
+    "h"  'hs-toggle-hiding
+    "g"  'lsp-goto-implementation
+    "f"  'lsp-format-buffer
     "b"  'pop-tag-mark
    )
  

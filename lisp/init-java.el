@@ -4,7 +4,14 @@
 ;;; This file java the configuration
 
 ;;; Code:
-
+(setq path-to-lombok "/opt/dir/d/soft/lombok.jar")
+(setq lsp-java-vmargs
+            `("-noverify"
+              "-Xmx1G"
+              "-XX:+UseG1GC"
+              "-XX:+UseStringDeduplication"
+              ,(concat "-javaagent:" path-to-lombok)
+              ,(concat "-Xbootclasspath/a:" path-to-lombok)))
 
 (defun enable-java ()
     "初始化java配置"

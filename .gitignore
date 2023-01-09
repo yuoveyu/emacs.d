@@ -34,3 +34,4 @@ var
 emacs-application-framework
 eaf
 .local
+.dap-breakpoints
