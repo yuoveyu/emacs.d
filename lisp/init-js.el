@@ -5,6 +5,10 @@
 
 ;;; Code:
 
+(use-package web-mode
+  :ensure t
+  :mode ("\\.vue\\'"))
+
 (provide 'init-js)
 
 ;; Local Variables:

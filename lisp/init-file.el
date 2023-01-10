@@ -60,7 +60,7 @@
           treemacs-tag-follow-cleanup            t
           treemacs-tag-follow-delay              1.5
           treemacs-user-mode-line-format         nil
-          treemacs-width                         35)
+          treemacs-width                         20)
 
     (treemacs-follow-mode t)
     (treemacs-filewatch-mode t)
