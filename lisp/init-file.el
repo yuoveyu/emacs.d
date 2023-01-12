@@ -60,7 +60,7 @@
           treemacs-tag-follow-cleanup            t
           treemacs-tag-follow-delay              1.5
           treemacs-user-mode-line-format         nil
-          treemacs-width                         20)
+          treemacs-width                         30)
 
     (treemacs-follow-mode t)
     (treemacs-filewatch-mode t)
@@ -106,6 +106,8 @@
 
 
 
+(defvar treemacs-custom-html-icon (all-the-icons-icon-for-file "name.html"))
+(treemacs-define-custom-icon treemacs-custom-html-icon "html" "htm")
 (provide 'init-file)
 
 ;; Local Variables:
