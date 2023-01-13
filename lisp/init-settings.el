@@ -14,6 +14,9 @@
 (set-keyboard-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8)
 
+(setq auto-save-default nil)
+
+
 ;;代替
 (defalias 'yes-or-no-p 'y-or-n-p)
 
