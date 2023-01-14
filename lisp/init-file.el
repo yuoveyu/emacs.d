@@ -106,8 +106,6 @@
 
 
 
-(defvar treemacs-custom-html-icon (all-the-icons-icon-for-file "name.html"))
-(treemacs-define-custom-icon treemacs-custom-html-icon "html" "htm")
 (provide 'init-file)
 
 ;; Local Variables:
