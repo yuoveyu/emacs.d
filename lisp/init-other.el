@@ -6,9 +6,10 @@
 ;;; Code:
 
 ;;字体图标
-(if window-system
-  (use-package all-the-icons
-   :ensure t))
+;;(if window-system
+;;  (use-package all-the-icons
+;;   :ensure t))
+
 
 ;;常用命令排前面
 (use-package amx
@@ -79,6 +80,13 @@
       (setq bing-dict-cache-auto-save t)
   )
 )
+
+(icons-in-terminal-insert)
+(icons-in-terminal-insert-faicon)
+(icons-in-terminal-faicon "book")
+(icons-in-terminal-icon-for-buffer)
+(icons-in-terminal-icon-for-mode 'emacs-lisp-mode)
+(icons-in-terminal-icon-for-file "template.el")
 
 (provide 'init-other)
 

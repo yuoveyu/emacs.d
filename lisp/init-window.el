@@ -16,6 +16,10 @@
 (sort-tab-mode 1)
 
 
+(add-to-list 'load-path "~/.emacs.d/site-lisp/icons-in-terminal") ; 
+(require 'icons-in-terminal)
+
+
 
 ;; Enforce rules for popups
 (use-package popper

@@ -7,7 +7,11 @@
 
 ;;; load-theme: tango-dark
 ;;(load-theme 'modus-vivendi t)
-(load-theme 'vs-dark t)
+;;(load-theme 'vs-dark t)
+;;(use-package spacemacs-theme
+;;  :ensure t)
+
+(load-theme 'spacemacs-dark t)
 (use-package doom-modeline
   :ensure t
   :hook

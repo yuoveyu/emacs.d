@@ -68,9 +68,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("171d1ae90e46978eb9c342be6658d937a83aaa45997b1d7af7657546cae5985b" default))
+   '("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "171d1ae90e46978eb9c342be6658d937a83aaa45997b1d7af7657546cae5985b" default))
  '(package-selected-packages
-   '(lua-mode tide js2-mode vue-mode company-lsp dap-mode lsp-ivy lsp-ui flycheck lsp-java yasnippet-snippets yasnippet dynamic-fonts bing-dict browse-kill-ring treemacs-all-the-icons company-tabnine company-box company window-numbering which-key use-package treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil rainbow-delimiters popper org-superstar org-super-agenda org-pomodoro org-bullets org-appear marginalia lsp-treemacs ivy-rich highlight-symbol general evil-org doom-modeline dashboard counsel-projectile amx all-the-icons))
+   '(spacemacs-theme lua-mode tide js2-mode vue-mode company-lsp dap-mode lsp-ivy lsp-ui flycheck lsp-java yasnippet-snippets yasnippet dynamic-fonts bing-dict browse-kill-ring treemacs-all-the-icons company-tabnine company-box company window-numbering which-key use-package treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil rainbow-delimiters popper org-superstar org-super-agenda org-pomodoro org-bullets org-appear marginalia lsp-treemacs ivy-rich highlight-symbol general evil-org doom-modeline dashboard counsel-projectile amx))
  '(select-enable-clipboard t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

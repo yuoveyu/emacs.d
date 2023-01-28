@@ -41,7 +41,7 @@
           treemacs-is-never-other-window         nil
           treemacs-max-git-entries               5000
           treemacs-missing-project-action        'ask
-          treemacs-no-png-images                 nil
+          treemacs-no-png-images                 t
           treemacs-no-delete-other-windows       t
           treemacs-project-follow-cleanup        nil
           treemacs-persist-file                  (expand-file-name ".cache/treemacs-persist" user-emacs-directory)
@@ -103,7 +103,6 @@
 (use-package lsp-treemacs
   :ensure t
   :after (treemacs lsp))
-
 
 
 (provide 'init-file)
