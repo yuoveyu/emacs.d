@@ -81,12 +81,12 @@
   )
 )
 
-(icons-in-terminal-insert)
-(icons-in-terminal-insert-faicon)
-(icons-in-terminal-faicon "book")
-(icons-in-terminal-icon-for-buffer)
-(icons-in-terminal-icon-for-mode 'emacs-lisp-mode)
-(icons-in-terminal-icon-for-file "template.el")
+;;(icons-in-terminal-insert)
+;;(icons-in-terminal-insert-faicon)
+;;(icons-in-terminal-faicon "book")
+;;(icons-in-terminal-icon-for-buffer)
+;;(icons-in-terminal-icon-for-mode 'emacs-lisp-mode)
+;;(icons-in-terminal-icon-for-file "template.el")
 
 (provide 'init-other)
 
