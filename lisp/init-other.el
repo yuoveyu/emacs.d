@@ -5,12 +5,6 @@
 
 ;;; Code:
 
-;;字体图标
-;;(if window-system
-;;  (use-package all-the-icons
-;;   :ensure t))
-
-
 ;;常用命令排前面
 (use-package amx
   :ensure t

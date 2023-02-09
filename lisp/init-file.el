@@ -5,13 +5,16 @@
 
 ;;; Code:
 
+;;字体图标
+(use-package all-the-icons
+    :ensure t)
 ;;项目管理
 (use-package projectile
   :ensure t
   ;;:bind (("C-c p" . projectile-command-map))
   :config
   (setq projectile-mode-line "Projectile")
-  (setq projectile-track-known-projects-automatically nil)
+  (setq projectile-track-known-projects-automatically t)
 )
 
 (use-package counsel-projectile
@@ -41,7 +44,7 @@
           treemacs-is-never-other-window         nil
           treemacs-max-git-entries               5000
           treemacs-missing-project-action        'ask
-          treemacs-no-png-images                 t
+          treemacs-no-png-images                 nil
           treemacs-no-delete-other-windows       t
           treemacs-project-follow-cleanup        nil
           treemacs-persist-file                  (expand-file-name ".cache/treemacs-persist" user-emacs-directory)
@@ -57,6 +60,7 @@
           treemacs-silent-refresh                nil
           treemacs-sorting                       'alphabetic-asc
           treemacs-space-between-root-nodes      t
+          treemacs-load-theme "all-the-icons"
           treemacs-tag-follow-cleanup            t
           treemacs-tag-follow-delay              1.5
           treemacs-user-mode-line-format         nil
@@ -104,6 +108,39 @@
   :ensure t
   :after (treemacs lsp))
 
+(require 'treemacs)
+(require 'all-the-icons)
+(require 'icons-in-terminal)
+(require 'treemacs-all-the-icons)
+(treemacs-load-theme "all-the-icons")
+
+(treemacs-modify-theme "all-the-icons"
+  ;;:icon-directory "/other/icons/dir"
+  :config
+  (progn
+   (treemacs-create-icon :icon "+" :extensions ("elc"))
+   ;;(treemacs-create-icon :icon (format "  %s%s" (all-the-icons-octicon "go" :v-adjust 0 :face 'all-the-icons-lsilver) treemacs-all-the-icons-tab) :extensions ("go") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "diropen" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions (root-open root-closed) :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "java" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("java" "jar") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "go" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("go") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "md" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("markdown" "md") :fallback 'same-as-icon)
+   
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "diropen" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions (dir-open) :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "dirclosed" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions (dir-closed) :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "emacs" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("el") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "python" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("py" "pyc") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "h5" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("html") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "js" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("js" "babel.config.js") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "vue" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("vue") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "json" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("json" "package.json" "package-lock.json") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "css" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("css" "sass" "less" "scss") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "js" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("rs") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "zap" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("org" "note") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "file-text" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions (fallback) :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "img" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions ("png" "gif" "jpg" "jpeg") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "other" :v-adjust 0 :face 'all-the-icons-dblue) treemacs-all-the-icons-tab) :extensions (".gitignore" "cache" "apk" "pptx" "ppt" "xls" "xlsx" "pl" "dmg" "xmind" ) :fallback 'same-as-icon)
+   ;;(treemacs-create-icon :file (icons-in-terminal-octicon "book" :v-adjust 0 :face 'icons-in-terminal-red) :extensions ("el"))
+))
 
 (provide 'init-file)
 

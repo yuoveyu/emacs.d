@@ -1,4 +1,4 @@
-;;; icons-in-terminal-data.el --- A module of faces for nerd-icons
+; icons-in-terminal-data.el --- A module of faces for nerd-icons
 
 ;; Copyright (C) 2019 Vincent Zhang <seagle0128@gmail.com>
 
@@ -1210,6 +1210,23 @@
         ("meetup" . "\xe387")))
     (octicon
      . (("heart" . "\xe000")
+	    ("go" . "\xe627")
+	    ("java" . "\ue738")
+	    ("diropen" . "\uf07c")
+	    ("dirclosed" . "\uf74a")
+	    ("emacs" . "\ue62d")
+	    ("md" . "\ue73e")
+	    ("python" . "\ue606")
+	    ("h5" . "\ue736")
+	    ("other" . "\ue612")
+	    ("js" . "\ue60c")
+	    ("json" . "\ue60b")
+	    ("vue" . "\ufd42")
+	    ("css" . "\ue603")
+	    ("img" . "\ue60d")
+	    ("org" . "\ueabc")
+
+      ;;yu add by end
         ("zap" . "\xe001")
         ("light-bulb" . "\xe002")
         ("repo" . "\xe003")
