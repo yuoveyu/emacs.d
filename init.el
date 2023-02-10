@@ -28,6 +28,7 @@
 (require 'init-ivy)  ; ivy
 (require 'init-window) ;窗口
 (require 'init-file)  ;文件和文件树
+(require 'init-treemacs)  ;treemacs
 (require 'init-theme) ;主题
 
 ;;(require-init 'init-code t);
