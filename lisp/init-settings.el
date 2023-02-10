@@ -74,6 +74,8 @@
 (use-package browse-kill-ring
   :ensure t)
 
+(defvar backup-dir "~/.config/backups/")
+(setq backup-directory-alist (list (cons "." backup-dir)))
 
 (provide 'init-settings)
 
