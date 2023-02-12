@@ -98,7 +98,7 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
 
 
   (+general-global-menu! "buffer" "b"
-    "d" 'kill-current-buffer
+    "c" 'kill-current-buffer
     "b" '(switch-to-buffer :which-key "switch buffer")
     "p" 'previous-buffer
     "R" 'rename-buffer
@@ -154,8 +154,7 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
 
     "l" 'avy-goto-line
     "c" 'avy-goto-char
-
-    "f" 'find-file
+    "f" 'counsel-projectile-find-file
     "r" 'consult-recent-file
     "L" 'consult-locate
     "d" 'consult-dir
@@ -230,7 +229,7 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "/" 'split-window-right
     "-" 'split-window-below
     "o" 'delete-other-windows
-    "d" 'delete-window
+    "c" 'delete-window
     "=" 'balance-windows-area)
 
 ;;meghanada-exec-main  :exit t)
