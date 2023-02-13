@@ -63,9 +63,9 @@
 (use-package org-ol-tree
   :commands org-ol-tree)
 
-;; 设置任务流程(这是我的配置)
+;; 设置任务流程(这是我的配置)指定“！”（记录时间戳）或“@”（作一个记录）。例如：
 (setq org-todo-keywords
-      '((sequence "TODO(t!)" "DOING(t!)" "WAIT(w!)" "|" "DONE(d!)" "CANCLE(a@/!)")))
+      '((sequence "TODO(T!)" "DOING(t!)" "WAIT(w!)" "|" "DONE(d@/!)" "CANCLE(a@/!)")))
 
 ;; 设置任务样式
 (setq org-todo-keyword-faces
@@ -75,6 +75,8 @@
     ("DONE" .      (:foreground "green" :weight bold))
     ("CANCLE" .     (:background "gray" :foreground "black"))
 ))
+
+(setq org-tag-alist '(("@work" . ?w) ("@emacs" . ?e) ("@nvim" . ?v) ("@book" . ?b) ))
 
 ;; Collect all .org from my Org directory and subdirs
 ;;(load-library "find-lisp")
@@ -105,7 +107,7 @@
 ;;通过函数触发org files to agenda
 (defun yu-org()
  (interactive)
- (setq org-directory "~/dir/yulove/org")
+ (setq org-directory "~/dir/yuorg/org")
  (setq org-agenda-files (list org-directory))
 )
 
