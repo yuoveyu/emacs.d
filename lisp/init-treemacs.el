@@ -118,11 +118,11 @@
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "json" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("json" "package.json" "package-lock.json") :fallback 'same-as-icon)
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "css" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("css" "sass" "less" "scss") :fallback 'same-as-icon)
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "js" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("rs") :fallback 'same-as-icon)
-   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "zap" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("org" "note") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "zap" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("org" "note" "org_archive") :fallback 'same-as-icon)
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "file-text" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions (fallback) :fallback 'same-as-icon)
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "img" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("png" "gif" "jpg" "jpeg") :fallback 'same-as-icon)
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "other" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions (".gitignore" "cache" "apk" "pptx" "ppt" "xls" "xlsx" "pl" "dmg" "xmind" "desktop" "eld" "dap-breakpoints" ) :fallback 'same-as-icon)
-   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "book" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions (".lsp-session-v1" "amx-items" "recentf" ) :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "book" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions (".lsp-session-v1" "amx-items" "recentf") :fallback 'same-as-icon)
    ;;(treemacs-create-icon :file (icons-in-terminal-octicon "book" :v-adjust 0 :face 'icons-in-terminal-red) :extensions ("el"))
 ))
 
