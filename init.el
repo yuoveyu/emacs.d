@@ -30,7 +30,7 @@
 (require 'init-file)  ;文件和文件树
 (require 'init-treemacs)  ;treemacs
 (require 'init-theme) ;主题
-
+(require 'init-yu) ;yu config
 ;;(require-init 'init-code t);
 (lazy-load-global-keys
  '(("C-c t c" . enable-code))
