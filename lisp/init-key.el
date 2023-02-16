@@ -182,7 +182,14 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "k" 'persp-kill)
 
 
-  (+general-global-menu! "org-mode" "o"
+(+general-global-menu! "org-mode" "o"
+    "m"  'org-archive-subtree-default
+    "p" 'org-set-property  
+    "s" 'org-schedule
+    "d" 'org-deadline
+    "t" 'org-todo
+    "T" 'og-set-tags-command
+    "o" 'org-open-at-point
     "a"  'org-agenda)
 
 
