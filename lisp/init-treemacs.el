@@ -4,6 +4,12 @@
 ;;; This treemacs file the configuration
 
 ;;; Code:
+(use-package all-the-icons
+    :ensure t)
+(use-package treemacs-all-the-icons
+    :ensure t)
+(add-to-list 'load-path "~/.emacs.d/site-lisp/icons-in-terminal") ; 
+(require 'icons-in-terminal)
 (use-package treemacs
   :ensure t
   :defer t
@@ -93,7 +99,6 @@
 
 (require 'treemacs)
 (require 'all-the-icons)
-(require 'icons-in-terminal)
 (require 'treemacs-all-the-icons)
 (treemacs-load-theme "all-the-icons")
 

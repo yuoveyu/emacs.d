@@ -11,13 +11,9 @@
 (window-numbering-mode 1)
 
 ;; tab
-(add-to-list 'load-path "~/.emacs.d/site-lisp/sort-tab") ; add sort-tab to your load-path
+(add-to-list 'load-path "/opt/dir/emacs.d/site-lisp/sort-tab") ; add sort-tab to your load-path
 (require 'sort-tab)
 (sort-tab-mode 1)
-
-
-(add-to-list 'load-path "~/.emacs.d/site-lisp/icons-in-terminal") ; 
-(require 'icons-in-terminal)
 
 
 

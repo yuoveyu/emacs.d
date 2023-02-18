@@ -107,7 +107,7 @@
 ;;通过函数触发org files to agenda
 (defun yu-org()
  (interactive)
- (setq org-directory "~/dir/yuorg/org")
+ (setq org-directory "/opt/dir/yuorg/org")
  (setq org-agenda-files (list org-directory))
 )
 

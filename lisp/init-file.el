@@ -5,9 +5,6 @@
 
 ;;; Code:
 
-;;字体图标
-(use-package all-the-icons
-    :ensure t)
 ;;项目管理
 (use-package projectile
   :ensure t

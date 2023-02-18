@@ -6,11 +6,6 @@
 
 ;;; Code:
 
-
-(use-package vscode-icon
-  :ensure t
-  :commands (vscode-icon-for-file))
-
 ;;M-x mouse-wheel-mode 开启滚轮支持
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -37,8 +32,8 @@
 
 
 ;;yu自定义插件配置文件 start
-(add-to-list 'load-path "~/.emacs.d/config")
-(require 'cp-settings)
+;;(add-to-list 'load-path "~/.emacs.d/config")
+;;(require 'cp-settings)
 
 (electric-indent-mode 1)
 (menu-bar-mode -1)

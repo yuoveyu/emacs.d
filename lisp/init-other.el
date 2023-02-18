@@ -36,11 +36,8 @@
 
 
 ;;git插件
-(defun enable-magit ()
-  (interactive)
-  (use-package magit
+(use-package magit
     :ensure t)
-)
 
 ;;一个为 Emacs minibuffer 中的选项添加注解的插件。
 (use-package marginalia
@@ -69,7 +66,7 @@
   (use-package bing-dict
     :ensure t
     :config
-      (setq bing-dict-vocabulary-file "/opt/dir/yulove/english.org")
+      (setq bing-dict-vocabulary-file "/opt/dir/english.org")
       (setq bing-dict-vocabulary-save t)
       (setq bing-dict-cache-auto-save t)
   )
