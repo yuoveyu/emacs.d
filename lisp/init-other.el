@@ -51,7 +51,8 @@
   (interactive)
   (if window-system
         (progn
-    (add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
+    (add-to-list 'load-path "/opt/dir/emacs.d/site-lisp/emacs-application-framework/")
+
     (require 'eaf)
     (require 'eaf-terminal)
     (require 'eaf-browser)

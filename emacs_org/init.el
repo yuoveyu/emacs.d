@@ -4,14 +4,16 @@
 ;;; This file start the configuration
 
 ;;; Code:
+(setq user-emacs-directory "/opt/dir/emacs.d/emacs_org/")
 (setq gc-cons-threshold most-positive-fixnum)
 (setq file-name-handler-alist nil)
 (setq message-log-max t)
 (setq debug-on-error nil)
 
-(defconst emacs-cache-directory
-  (expand-file-name (concat user-emacs-directory ".cache/"))
-  "Emacs cache directory.")
+(setq emacs-cache-directory "/opt/dir/emacs.d/emacs_org/.cache/")
+;;(defconst emacs-cache-directory
+;;  (expand-file-name (concat user-emacs-directory ".cache/"))
+;; "Emacs cache directory.")
 
 (add-to-list 'load-path (expand-file-name "lisp" "/opt/dir/emacs.d"))
 (require 'init-elpa) ; 下载源
