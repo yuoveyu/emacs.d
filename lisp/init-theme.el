@@ -11,6 +11,8 @@
 ;;(use-package spacemacs-theme
 ;;  :ensure t)
 ;; spacemacs-dark
+(use-package nord-theme
+  :ensure t)
 (load-theme 'nord t)
 (use-package doom-modeline
   :ensure t

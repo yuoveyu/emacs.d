@@ -86,14 +86,10 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "SPC" 'execute-extended-command
     "y" 'bing-dict-brief
     "x" 'scratch-buffer
-    "TAB" 'spacemacs/alternate-buffer
     "'" 'vertico-repeat
     "=" 'indent-buffer
-    "u" 'universal-argument
-    "v" 'er/expand-region
     ";" 'vterm
     "g" 'keyboard-quit
-    "`" 'multi-vterm-project
    )
 
 
@@ -182,7 +178,19 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "k" 'persp-kill)
 
 
-  (+general-global-menu! "org-mode" "o"
+(+general-global-menu! "org-mode" "o"
+    "m"  'org-archive-subtree-default
+    "p" 'org-set-property  
+    "s" 'org-schedule
+    "d" 'org-deadline
+    "t" 'org-todo
+    "T" 'og-set-tags-command
+    "o" 'org-open-at-point
+    "1" 'open-org-inbox'
+    "2" 'open-org-todo'
+    "3" 'open-org-todo-often'
+    "4" 'open-org-todo-back'
+    "5" 'open-org-finsh'
     "a"  'org-agenda)
 
 
