@@ -10,10 +10,9 @@
 ;;(load-theme 'vs-dark t)
 ;;(use-package spacemacs-theme
 ;;  :ensure t)
-;; spacemacs-dark
 (use-package nord-theme
   :ensure t)
-(load-theme 'nord t)
+(load-theme 'spacemacs-dark t);;nord
 (use-package doom-modeline
   :ensure t
   :hook
