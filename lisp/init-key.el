@@ -76,13 +76,19 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "!" 'shell-command
     ":" 'counsel-M-x
     "-" 'counsel-M-x
-    "0" 'select-window-0
-    "1" 'select-window-1
-    "2" 'select-window-2
-    "3" 'select-window-3
-    "4" 'select-window-4
-    "5" 'select-window-5
-    "6" 'select-window-6
+    "1" 'sort-tab-yu-0
+    "2" 'sort-tab-yu-1
+    "3" 'sort-tab-yu-2
+    "4" 'sort-tab-yu-3
+    "5" 'sort-tab-yu-4
+    "6" 'sort-tab-yu-5
+    ;;"0" 'select-window-0
+    ;;"1" 'select-window-1
+    ;;"2" 'select-window-2
+    ;;"3" 'select-window-3
+    ;;"4" 'select-window-4
+    ;;"5" 'select-window-5
+    ;;"6" 'select-window-6
     "SPC" 'execute-extended-command
     "y" 'bing-dict-brief
     "x" 'scratch-buffer
@@ -95,7 +101,9 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
 
   (+general-global-menu! "buffer" "b"
     "c" 'kill-current-buffer
-    "b" '(switch-to-buffer :which-key "switch buffer")
+    ;;"b" '(switch-to-buffer :which-key "switch buffer")
+
+    "b" '(ido-switch-buffer :which-key "switch buffer")
     "p" 'previous-buffer
     "R" 'rename-buffer
     "M" '((lambda () (interactive) (switch-to-buffer "*Messages*"))
@@ -106,6 +114,7 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "y" 'copy-buffer-name
     "K" 'kill-other-buffers
 
+    "0" 'sort-tab-yu-0
     "1" 'sort-tab-yu-1
     "2" 'sort-tab-yu-2
     "3" 'sort-tab-yu-3
@@ -113,13 +122,6 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "5" 'sort-tab-yu-5
     )
  
-   (+general-global-menu! "buffer-prev" "B"
-     
-    "1" 'sort-tab-su-1
-    "2" 'sort-tab-su-2
-    "3" 'sort-tab-su-3
-    "4" 'sort-tab-su-4
-    "5" 'sort-tab-su-5)
 
    (+general-global-menu! "code" "c"
 
