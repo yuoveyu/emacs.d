@@ -236,8 +236,8 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "4" 'select-window-4
     "5" 'select-window-5
     "6" 'select-window-6
-    "/" 'split-window-right
-    "-" 'split-window-below
+    "-" 'split-window-right
+    "/" 'split-window-below
     "o" 'delete-other-windows
     "c" 'delete-window
     "=" 'balance-windows-area)
