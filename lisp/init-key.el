@@ -137,9 +137,9 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
 
   (+general-global-menu! "file" "f"
 
+    "f"  'counsel-projectile-find-file
     "l" 'avy-goto-line
     "c" 'avy-goto-char
-    "f" 'counsel-projectile-find-file
     "r" 'consult-recent-file
     "L" 'consult-locate
     "d" 'consult-dir
@@ -209,7 +209,7 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
      "t" '(counsel-projectile-ag :which-key "文本查询")
      )
 
-  (+general-global-menu! "toggle" "T"
+  (+general-global-menu! "toggle" "t"
     "t"  'treemacs
     "s"  'treemacs-switch-workspace
     "c"  'treemacs-create-workspace
