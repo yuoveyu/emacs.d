@@ -76,12 +76,12 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "!" 'shell-command
     ":" 'counsel-M-x
     "-" 'counsel-M-x
-    "1" 'sort-tab-yu-0
-    "2" 'sort-tab-yu-1
-    "3" 'sort-tab-yu-2
-    "4" 'sort-tab-yu-3
-    "5" 'sort-tab-yu-4
-    "6" 'sort-tab-yu-5
+    "1" '(sort-tab-yu-0 :which-key "切换到第1个buffer")
+    "2" '(sort-tab-yu-1 :which-key "切换到第2个buffer")
+    "3" '(sort-tab-yu-2 :which-key "切换到第3个buffer")
+    "4" '(sort-tab-yu-3 :which-key "切换到第4个buffer")
+    "5" '(sort-tab-yu-4 :which-key "切换到第5个buffer")
+    "6" '(sort-tab-yu-5 :which-key "切换到第6个buffer")
     ;;"0" 'select-window-0
     ;;"1" 'select-window-1
     ;;"2" 'select-window-2
