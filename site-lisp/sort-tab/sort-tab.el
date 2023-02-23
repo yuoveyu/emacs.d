@@ -459,16 +459,6 @@
   )
   )
 
-
-(defun sort-tab-su(number)
-  (setq sortIndex 0)
-  (while (< sortIndex number)
-    ;;(incf sortIndex)
-    (message "%d" sortIndex)
-    (switch-to-buffer (sort-tab-get-prev-buffer))
-    (setq sortIndex (+ sortIndex 1))
-	))
-
 (defun sort-tab-yu-0()
   (interactive)
   (sort-tab-yu 0))
@@ -484,7 +474,6 @@
 (defun sort-tab-yu-4()
   (interactive)
   (sort-tab-yu 4))
-
 (defun sort-tab-yu-5()
   (interactive)
   (sort-tab-yu 5))

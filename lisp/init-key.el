@@ -76,24 +76,14 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "!" 'shell-command
     ":" 'counsel-M-x
     "-" 'counsel-M-x
-    "1" 'sort-tab-yu-0
-    "2" 'sort-tab-yu-1
-    "3" 'sort-tab-yu-2
-    "4" 'sort-tab-yu-3
-    "5" 'sort-tab-yu-4
-    "6" 'sort-tab-yu-5
-    ;;"0" 'select-window-0
-    ;;"1" 'select-window-1
-    ;;"2" 'select-window-2
-    ;;"3" 'select-window-3
-    ;;"4" 'select-window-4
-    ;;"5" 'select-window-5
-    ;;"6" 'select-window-6
+    "1" '(sort-tab-yu-0 :which-key "切换到第1个buffer")
+    "2" '(sort-tab-yu-1 :which-key "切换到第2个buffer")
+    "3" '(sort-tab-yu-2 :which-key "切换到第3个buffer")
+    "4" '(sort-tab-yu-3 :which-key "切换到第4个buffer")
+    "5" '(sort-tab-yu-4 :which-key "切换到第5个buffer")
+    "6" '(sort-tab-yu-5 :which-key "切换到第6个buffer")
     "SPC" 'execute-extended-command
     "y" 'bing-dict-brief
-    "x" 'scratch-buffer
-    "'" 'vertico-repeat
-    "=" 'indent-buffer
     ";" 'vterm
     "g" 'keyboard-quit
    )
@@ -102,26 +92,23 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
   (+general-global-menu! "buffer" "b"
     "c" 'kill-current-buffer
     ;;"b" '(switch-to-buffer :which-key "switch buffer")
-
     "b" '(ido-switch-buffer :which-key "switch buffer")
-    "p" 'previous-buffer
+    ;;"p" 'previous-buffer
     "R" 'rename-buffer
     "M" '((lambda () (interactive) (switch-to-buffer "*Messages*"))
           :which-key "messages-buffer")
-    "n" 'next-buffer
-    "i" 'ibuffer
+    ;;"n" 'next-buffer
+    ;;"i" 'ibuffer
     "k" 'kill-buffer
     "y" 'copy-buffer-name
-    "K" 'kill-other-buffers
 
-    "0" 'sort-tab-yu-0
-    "1" 'sort-tab-yu-1
-    "2" 'sort-tab-yu-2
-    "3" 'sort-tab-yu-3
-    "4" 'sort-tab-yu-4
-    "5" 'sort-tab-yu-5
+    "1" 'sort-tab-yu-0
+    "2" 'sort-tab-yu-1
+    "3" 'sort-tab-yu-2
+    "4" 'sort-tab-yu-3
+    "5" 'sort-tab-yu-4
+    "6" 'sort-tab-yu-5
     )
- 
 
    (+general-global-menu! "code" "c"
 
@@ -150,9 +137,9 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
 
   (+general-global-menu! "file" "f"
 
+    "f"  'counsel-projectile-find-file
     "l" 'avy-goto-line
     "c" 'avy-goto-char
-    "f" 'counsel-projectile-find-file
     "r" 'consult-recent-file
     "L" 'consult-locate
     "d" 'consult-dir
@@ -161,12 +148,12 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "y" 'copy-file-name)
 
 
- (+general-global-menu! "file" "F"
-    "s" 'select-frame-by-name
-    "f" 'find-file-other-frame
-    "b" 'switch-to-buffer-other-frame
-    "d" 'delete-frame
- )
+;; (+general-global-menu! "file" "F"
+;;    "s" 'select-frame-by-name
+;;    "f" 'find-file-other-frame
+;;    "b" 'switch-to-buffer-other-frame
+;;    "d" 'delete-frame
+;; )
 
  (+general-global-menu! "layout" "l"
 
@@ -181,6 +168,7 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
 
 
 (+general-global-menu! "org-mode" "o"
+    "f"  'counsel-projectile-find-file
     "m"  'org-archive-subtree-default
     "p" 'org-set-property  
     "s" 'org-schedule
@@ -214,13 +202,14 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
    (+general-global-menu! "view" "v"
     "a" 'ivy-push-view
     "r" 'ivy-pop-view
+    "f"  'counsel-projectile-find-file
     "s" 'ivy-switch-view)
   
+   (+general-global-menu! "Search" "s"
+     "t" '(counsel-projectile-ag :which-key "文本查询")
+     )
 
-   (+general-global-menu! "toggle" "t"
-    "s" 'flycheck-mode)
-
-  (+general-global-menu! "toggle" "T"
+  (+general-global-menu! "toggle" "t"
     "t"  'treemacs
     "s"  'treemacs-switch-workspace
     "c"  'treemacs-create-workspace
@@ -229,15 +218,14 @@ Create prefix map: +general-global-NAME. Prefix bindings in BODY with INFIX-KEY.
     "a"  'treemacs-add-project)
 
  (+general-global-menu! "window" "w"
-    "0" 'select-window-0
     "1" 'select-window-1
     "2" 'select-window-2
     "3" 'select-window-3
     "4" 'select-window-4
     "5" 'select-window-5
     "6" 'select-window-6
-    "/" 'split-window-right
-    "-" 'split-window-below
+    "-" 'split-window-right
+    "/" 'split-window-below
     "o" 'delete-other-windows
     "c" 'delete-window
     "=" 'balance-windows-area)
