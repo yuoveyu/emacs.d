@@ -71,7 +71,7 @@
  '(custom-safe-themes
    '("37768a79b479684b0756dec7c0fc7652082910c37d8863c35b702db3f16000f8" "170fff029075955b1d435adc3a2423e791a08b066cc077df5a480b040bbcf15f" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "171d1ae90e46978eb9c342be6658d937a83aaa45997b1d7af7657546cae5985b" default))
  '(package-selected-packages
-   '(nordless-theme vterm magit nord-theme spacemacs-theme lua-mode tide js2-mode vue-mode company-lsp dap-mode lsp-ivy lsp-ui flycheck lsp-java yasnippet-snippets yasnippet dynamic-fonts bing-dict browse-kill-ring treemacs-all-the-icons company-tabnine company-box company window-numbering which-key use-package treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil rainbow-delimiters popper org-superstar org-super-agenda org-pomodoro org-bullets org-appear marginalia lsp-treemacs ivy-rich highlight-symbol general evil-org doom-modeline dashboard counsel-projectile amx))
+   '(atom-one-dark-theme nordless-theme vterm magit nord-theme spacemacs-theme lua-mode tide js2-mode vue-mode company-lsp dap-mode lsp-ivy lsp-ui flycheck lsp-java yasnippet-snippets yasnippet dynamic-fonts bing-dict browse-kill-ring treemacs-all-the-icons company-tabnine company-box company window-numbering which-key use-package treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil rainbow-delimiters popper org-superstar org-super-agenda org-pomodoro org-bullets org-appear marginalia lsp-treemacs ivy-rich highlight-symbol general evil-org doom-modeline dashboard counsel-projectile amx))
  '(select-enable-clipboard t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
