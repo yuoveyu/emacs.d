@@ -5,9 +5,7 @@
 
 ;;; Code:
 
-(defun enable-code ()
-  (interactive)
-  (use-package company
+(use-package company
     :ensure t
     :init (global-company-mode)
     :config
@@ -18,19 +16,19 @@
     (setq company-selection-wrap-around t)
     (setq company-transformers '(company-sort-by-occurrence))) ; 根据选择的频率进行排序，读者如果不喜欢可以去掉
 
-  (use-package company-box
+(use-package company-box
     :ensure t
     :if window-system
     :hook (company-mode . company-box-mode))
 
 
-  ;;AI智能补全
-  (use-package company-tabnine
+;;AI智能补全
+(use-package company-tabnine
     :ensure t
     :init (add-to-list 'company-backends #'company-tabnine))
 
-  ;;代码片段
-  (use-package yasnippet
+;;代码片段
+(use-package yasnippet
     :ensure t
     ;;:init
     ;;(yas-reload-all)
@@ -51,12 +49,12 @@
     :bind
     (:map yas-minor-mode-map ("S-<tab>" . yas-expand)))
 
-  (use-package yasnippet-snippets
+(use-package yasnippet-snippets
     :ensure t
     :after yasnippet)
 
-  ;;代码检测
-  (use-package flycheck
+;;代码检测
+(use-package flycheck
     :ensure t
     :config
     (setq truncate-lines nil) ; 如果单行信息很长会自动换行
@@ -64,7 +62,7 @@
     (prog-mode . flycheck-mode))
 
 
-  (use-package lsp-mode
+(use-package lsp-mode
     :ensure t
     :init
 
@@ -84,7 +82,7 @@
     )
 
 
-  (use-package lsp-ui
+(use-package lsp-ui
     :ensure t
     :commands lsp-ui-mode
     :config
@@ -93,7 +91,7 @@
     (setq lsp-ui-doc-position 'top))
 
 
-  (use-package lsp-ivy
+(use-package lsp-ivy
     :ensure t
     :after (lsp-mode))
 
@@ -102,7 +100,7 @@
 
 
 
-  (use-package dap-mode
+(use-package dap-mode
     :ensure t
     :after  lsp-mode
     :commands dap-debug
@@ -112,7 +110,6 @@
     (dap-ui-mode 1)
     )
 
-)
 
 (provide 'init-code)
 

@@ -15,8 +15,8 @@
   "Emacs cache directory.")
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(add-to-list 'load-path "~/.emacs.d/site-lisp/lazy-load") ; add sort-tab to your load-path
-(require 'lazy-load)
+;;(add-to-list 'load-path "~/.emacs.d/site-lisp/lazy-load") ; add sort-tab to your load-path
+;;(require 'lazy-load)
 
 
 ;; Require package
@@ -31,30 +31,15 @@
 (require 'init-treemacs)  ;treemacs
 (require 'init-theme) ;主题
 (require 'init-yu) ;yu config
-;;(require-init 'init-code t);
-(lazy-load-global-keys
- '(("C-c t c" . enable-code))
- "init-code")
+(require 'init-code);
 
 (require 'init-java)  ;java
-(lazy-load-global-keys
- '(("C-c t j" . enable-java))
- "init-java")
 ;;(require 'init-python)  ;python
 ;;(require 'init-go)  ;go
-;;(require 'init-web)  ;web
+;(require 'init-web)  ;web
 (require 'init-js)  ;web
 (require 'init-org) ;other
-
-
 (require 'init-other) ;other
-(lazy-load-global-keys
- '(("h" . enable-hightlight)
-   ("g" . enable-magit)
-   ("e" . enable-eaf)
-   ("b" . enable-bing-dict))
- "init-other"
- "C-c t")
 
 ;;(require 'init-markdown) ;markdown
 

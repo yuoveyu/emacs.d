@@ -13,10 +13,7 @@
               ,(concat "-javaagent:" path-to-lombok)
               ,(concat "-Xbootclasspath/a:" path-to-lombok)))
 
-(defun enable-java ()
-    "初始化java配置"
-     (interactive)
-    (use-package lsp-java
+(use-package lsp-java
     :ensure t
     :config (add-hook 'java-mode-hook 'lsp))
 
@@ -29,7 +26,7 @@
     ;; to enable the lenses
     (add-hook 'lsp-mode-hook #'lsp-lens-mode)
     (add-hook 'java-mode-hook #'lsp-java-boot-lens-mode)
-)
+
 
 
 
