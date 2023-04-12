@@ -110,7 +110,7 @@
    ;;(treemacs-create-icon :icon (format "  %s%s" (all-the-icons-octicon "go" :v-adjust 0 :face 'all-the-icons-lsilver) treemacs-all-the-icons-tab) :extensions ("go") :fallback 'same-as-icon)
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "diropen" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions (root-open root-closed) :fallback 'same-as-icon)
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "java" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("java" "jar") :fallback 'same-as-icon)
-   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "go" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("go") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "go" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("go" "go.mod" "go.sum") :fallback 'same-as-icon)
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "md" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("markdown" "md") :fallback 'same-as-icon)
    
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "diropen" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions (dir-open) :fallback 'same-as-icon)
@@ -126,7 +126,7 @@
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "zap" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("org" "note" "org_archive") :fallback 'same-as-icon)
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "file-text" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions (fallback) :fallback 'same-as-icon)
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "img" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions ("png" "gif" "jpg" "jpeg") :fallback 'same-as-icon)
-   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "other" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions (".gitignore" "cache" "apk" "pptx" "ppt" "xls" "xlsx" "pl" "dmg" "xmind" "desktop" "eld" "dap-breakpoints" ".xprofile" ".yml" ".yaml" "fishyu") :fallback 'same-as-icon)
+   (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "other" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions (".gitignore" "cache" "apk" "pptx" "ppt" "xls" "xlsx" "pl" "dmg" "xmind" "desktop" "eld" "dap-breakpoints" ".xprofile" ".yml" ".yaml" "fishyu" ".yu") :fallback 'same-as-icon)
    (treemacs-create-icon :icon (format "  %s%s" (icons-in-terminal-octicon "book" :v-adjust 0 :face 'icons-in-terminal-dblue) treemacs-all-the-icons-tab) :extensions (".lsp-session-v1" "amx-items" "recentf") :fallback 'same-as-icon)
    ;;(treemacs-create-icon :file (icons-in-terminal-octicon "book" :v-adjust 0 :face 'icons-in-terminal-red) :extensions ("el"))
 ))

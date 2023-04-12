@@ -73,8 +73,10 @@
     ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   
     :hook
-      ((js-mode css-mode scss-mode web-mode) . lsp)
+      ;;(js-mode css-mode scss-mode web-mode) 
+       (go-mode . lsp-deferred)
       (lsp-mode . lsp-enable-which-key-integration) ; which-key integration
+     
     :commands (lsp lsp-deferred)
     :config
       (setq lsp-completion-provider :none) ;; 阻止 lsp 重新设置 company-backend 而覆盖我们 yasnippet 的设置
