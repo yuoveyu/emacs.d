@@ -16,16 +16,17 @@
   :ensure t)
 
 (load-theme 'spacemacs-dark t);;nord
-(use-package doom-modeline
-  :ensure t
-  :hook
-  (after-init . doom-modeline-mode)
-  :config
-  (setq doom-modeline-project-detection 'project)
-  (setq doom-modeline-icon t)
-  (setq doom-modeline-major-mode-color-icon t)
-  (setq doom-modeline-major-mode-icon t)
-  )
+
+;;(use-package doom-modeline
+;;  :ensure t
+;;  :hook
+;;  (after-init . doom-modeline-mode)
+;;  :config
+;;  (setq doom-modeline-project-detection 'project)
+;;  (setq doom-modeline-icon t)
+;;  (setq doom-modeline-major-mode-color-icon t)
+;;  (setq doom-modeline-major-mode-icon t)
+;;  )
 
 
 (provide 'init-theme)

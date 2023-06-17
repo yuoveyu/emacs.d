@@ -6,10 +6,10 @@
 ;;; Code:
 
 ;;欢迎页面
- (use-package dashboard
+(use-package dashboard
   :ensure t
   :config
-  (setq dashboard-banner-logo-title "Welcome to yumore Emacs!") ;; 个性签名，随读者喜好设置
+  (setq dashboard-banner-logo-title "Welcome to yumore Emacs!") ;; 个性签名
    (setq dashboard-projects-backend 'projectile)
   (setq dashboard-items '((recents  . 5)   ;; 显示多少个最近文件
 			  (bookmarks . 5)  ;; 显示多少个最近书签
