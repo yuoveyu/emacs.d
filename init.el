@@ -18,7 +18,6 @@
 ;;(add-to-list 'load-path "~/.emacs.d/site-lisp/lazy-load") ; add sort-tab to your load-path
 ;;(require 'lazy-load)
 
-
 ;; Require package
 (require 'init-elpa) ; 下载源
 (require 'init-start) ; 启动页面

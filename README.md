@@ -1,4 +1,4 @@
-# \ue632emacs.d
+# emacs.d
 my emacs config
 
 git clone https://github.com/yuoveyu/emacs.d ~/.emacs.d

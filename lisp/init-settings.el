@@ -65,6 +65,9 @@
 ;;  :ensure t
 ;;  :init (xclip-mode))
 
+(use-package memoize
+    :ensure t)
+
 
 (use-package browse-kill-ring
   :ensure t)

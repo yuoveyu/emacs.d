@@ -24,8 +24,8 @@
 
 (add-to-list 'dashboard-item-generators  '(custom . dashboard-insert-custom))
 (add-to-list 'dashboard-items '(custom) t)
-(setq dashboard-set-heading-icons t)
-(setq dashboard-set-file-icons t)
+;;(setq dashboard-set-heading-icons t)
+;;(setq dashboard-set-file-icons t)
 (setq dashboard-set-navigator t)
 (setq dashboard-center-content t)
 
